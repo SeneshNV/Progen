@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bill Calculator</title>
+	<style>
+		.container {
+			width: 50%;
+			margin: auto;
+			text-align: center;
+			padding: 20px;
+			border: 1px solid #ccc;
+			border-radius: 10px;
+		}
+		.form-group {
+			margin-bottom: 20px;
+		}
+		label {
+			display: block;
+			margin-bottom: 5px;
+		}
+		input[type="number"] {
+			padding: 5px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			width: 100%;
+		}
+		button[type="submit"] {
+			padding: 10px 20px;
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Bill Calculator</h1>
+		<form id="bill-form">
+			<div class="form-group">
+				<label for="bill1">Doctor chajers:</label>
+				<input type="number" id="bill1" name="bill1" placeholder="Enter bill amount">
+			</div>
+			<div class="form-group">
+				<label for="bill2">Test charges</label>
+				<input type="number" id="bill2" name="bill2" placeholder="Enter bill amount">
+			</div>
+			<div class="form-group">
+				<label for="bill3">X-Ray</label>
+				<input type="number" id="bill3" name="bill3" placeholder="Enter bill amount">
+			</div>
+			<div class="form-group">
+				<label for="bill4">Surguary charges</label>
+				<input type="number" id="bill4" name="bill4" placeholder="Enter bill amount">
+			</div>
+			<button type="submit">Calculate Total</button>
+		</form>
+		<h2 id="total"></h2>
+	</div>
+	<script>
+		const form = document.getElementById('bill-form');
+		form.addEventListener('submit', (e) => {
+			e.preventDefault();
+			const bill1 = parseFloat(document.getElementById('bill1').value) || 0;
+			const bill2 = parseFloat(document.getElementById('bill2').value) || 0;
+			const bill3 = parseFloat(document.getElementById('bill3').value) || 0;
+			const bill4 = parseFloat(document.getElementById('bill4').value) || 0;
+			const total = bill1 + bill2 + bill3 + bill4;
+			document.getElementById('total').innerHTML = `Total: $${total.toFixed(2)}`;
+		});
+	</script>
+
+<a href="payment.html">Submit</a>
+<a href="payment.html">Send copy to Insurance company</a>
+
+</body>
+</html>

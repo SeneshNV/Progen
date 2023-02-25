@@ -1,0 +1,59 @@
+:root {
+    --background-color: #85befc;
+    --form-color: #ffffff;
+  }
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-image: url("");
+    /*background-color: var(--background-color);*/
+    background: linear-gradient(-45deg, #f1f1f1, #d8d8d8, #c6c6c6, #e1e1e1);
+
+}
+
+
+.loging_area{
+    background-color: var(--form-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 30%;
+}
+
+.loging_area .logo img {
+    height: 75px;
+}
+
+.loging_area .input_field input{
+    height: 30px;
+    width: 80%;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    padding: 5px;
+    border-color:rgb(198, 198, 198,0.2);   
+}
+
+.loging_area .input_field input[type="submit"]{
+    width: 40%;
+    height: 40px;
+    border-radius: 6px;
+    background-color: var(--background-color);
+    font-size: medium;
+    border-color: transparent;
+    margin-top: 10px;
+}
+
+.loging_area .input_field input[type="submit"]:hover{
+    background-color: rgb(36, 169, 36);
+    color: var(--form-color);
+    font-weight: bolder;
+}
+
+ 
+
