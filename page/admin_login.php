@@ -28,7 +28,7 @@
             </div>
 
 
-                <a href="add_bill.php">Submit</a>
+            <a href="add_bill.php">Submit</a>
 
         </form>
 
